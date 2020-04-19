@@ -1,0 +1,329 @@
+<html>
+  <head>
+    <title>2020 OSS</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans KR', sans-serif;
+        box-sizing: border-box;
+      }
+
+      body{
+        background-color: #fff;
+        color: rgb(55, 53, 47);
+      }
+
+      .title{
+        position: relative;
+        display: flex;
+        background: url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&w=4800") center center/cover fixed;
+        width: 100%;
+        height: 300px;
+
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+      .title h1{
+        color: white;
+        font-size: 40px;
+        text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+      }
+
+      .content{
+        position: relative;
+        max-width: 780px;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        justify-content: center;
+        /* border: 1px solid black; */
+      }
+
+      /* Profile */
+
+      .content .profile{
+        display: block;
+        width: 100%;
+      }
+      .content .profile hr{
+        border: 1px solid rgba(55, 53, 47,0.25);
+      }
+      .content .subtitle{
+        margin-bottom: 20px;
+        font-size: 28px;
+      }
+
+      .content .profile .name{
+        margin-bottom: 30px;
+      }
+      .content .profile .name h1{
+        font-size: 35px;
+        font-weight: 700;
+        margin-bottom: 5px;
+      }
+      .content .profile .name h2{
+        font-size: 13px;
+        font-weight: 700;
+        color: rgba(55, 53, 47,0.55);
+        margin-bottom: 15px;
+      }
+      .content .profile .name .prof_intro{
+        margin-top: 15px;
+        padding: 3px 30px;
+        font-size: 15px;
+        font-weight: 500;
+        border-left: 6px solid #37352f;
+      }
+
+      .content .profile .call{
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .content .profile .call h3{
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        font-weight: 500;
+      }
+      .content .profile .call h3 img{
+        width: 20px;
+        margin-right: 10px;
+      }
+      .content .profile .call h3 a{
+        color: #37352f;
+        /* text-decoration: none; */
+      }
+
+      .content .profile .dev{
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .content .profile .dev .subColor{
+        color: rgba(55, 53, 47,0.55);
+        font-size: 15px;
+      }
+      .content .profile .dev input[type="checkbox"]{
+        display: none;
+      }
+      .content .profile .dev .items{
+        display: flex;
+        flex-direction: row;
+        padding-right: 100px;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+      }
+      .content .profile .dev label{
+        font-weight: 700;
+        font-size: 18px;
+        text-decoration: underline;
+      }
+
+      .content .profile .dev .subitems{
+        /* height: max-content; */
+        height: 0px;
+        overflow: hidden;
+        transition: all 0.2s;
+      }
+      .content .profile .dev .subitem{
+        background-color: #ededed;
+        margin: 10px 110px 10px 10px;
+        padding: 12px;
+        overflow: hidden;
+      }
+      .content .profile .dev .subitem h5{
+        margin-bottom: 5px;
+      }
+      .content .profile .dev .subitem h6{
+        font-size: 12px;
+      }
+      .content .profile .dev .subitem h6 span{
+        background-color: rgba(106, 92, 52, 0.55);
+        padding: 2px 5px;
+        border-radius: 3px;
+        margin-right: 10px;
+        color: white;
+      }
+      .content .profile .dev .subitem h6 .red{
+        background-color: rgba(150, 51, 29, 0.55);
+      }
+      .content .profile .dev .subitem h6 .yellow{
+        background-color: rgba(142, 114, 37, 0.55);
+      }
+      .content .profile .dev .subitem h6 .green{
+        background-color: rgba(43, 121, 27, 0.55);
+      }
+      .content .profile .dev .subitem h6 .blue{
+        background-color: rgba(29, 40, 123, 0.55);
+      }
+      .content .profile .dev .subitem h6 .purple{
+        background-color: rgba(109, 23, 126, 0.55);
+      }
+      .content .profile .dev .subitem h6 .pink{
+        background-color: rgba(116, 10, 104, 0.55);
+      }
+      .content .profile .dev #dev1:checked ~ .sub1{
+        height: 86px;
+      }
+      .content .profile .dev #dev2:checked ~ .sub2{
+        height: 86px;
+      }
+      .content .profile .dev #dev3:checked ~ .sub3{
+        height: 86px;
+      }
+
+      .content .profile .education{
+        margin-top: 20px;
+        margin-bottom: 30px;
+      }
+      .content .profile h3{
+        font-size: 20px;
+      }
+      .content .profile h4{
+        font-size: 15px;
+        font-weight: 600;
+        color: rgba(55, 53, 47,0.55);
+        margin-left: 40px;
+        margin-bottom: 10px;
+      }
+
+      .content .profile .info{
+        margin-top: 20px;
+      }
+
+      /* member */
+
+      .content .member{
+        margin-top: 50px;
+      }
+
+      .content .member .team h1{
+        font-size: 33px;
+      }
+      .content .member .team h2{
+        margin-left: 115px;
+        color: rgba(55, 53, 47,0.55);
+        font-size: 15px;
+      }
+
+      .content .member .members{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 30px;
+        position: relative;
+      }
+
+      .content .member .members .item{
+        background-color: #ededed;
+        padding: 20px;
+        border: 10px;
+        width: 47%;
+      }
+      .content .member .members .item h1{
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      .content .member .members .item h2{
+        font-size: 13px;
+        margin-bottom: 5px;
+      }
+      .content .member .members .item a{
+        color: rgb(55, 53, 47);
+        font-size: 13px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">
+      <h1>2020 Open Source Software</h1>
+    </div>
+    <div class="content">
+      <div class="profile">
+        <div class="name">
+          <h1>임기성 (Plut0)</h1>
+          <h2>한양대학교 ERICA 소프트웨어 학부 - 2019084984</h2>
+          <div class="prof_intro">
+            안녕하세요. Web Front-end 개발과 dev-ops를 하는 개발자 임기성 입니다.<br>
+            React, Node.js 를 주로 사용하며 최신의 Front-end 프레임 워크와 WASM에 관심이 있습니다.
+          </div>
+        </div>
+        <hr/>
+        <div class="call">
+          <h2 class="subtitle">연락처</h2>
+          <h3><img src="./img/phone.png" alt="">+82 10-4714-6793</h3>
+          <h3><img src="./img/mail.png" alt="">slimdoks@gmail.com</h3>
+          <h3><img src="./img/github.png" alt=""><a href="https://github.com/PIut0/2020oss_repo">Github Repo</a></h3>
+        </div>
+        <hr/>
+        <div class="dev">
+          <h2 class="subtitle">개발 경력</h2>
+          <input type="checkbox" id="dev1">
+          <input type="checkbox" id="dev2">
+          <input type="checkbox" id="dev3">
+          <div class="items">
+            <label for="dev1">코딩 버드</label><h4 class="subColor">Full-Stack Developer, 2019.06 ~ 2019.08</h4>
+          </div>
+          <div class="subitems sub1">
+            <div class="subitem">
+              <h5>플랫폼 웹 페이지 제작 및 e-commerce 플랫폼 유지보수</h5>
+              <h6><span class="red">HTML</span><span class="green">CSS</span><span class="yellow">JS</span><span class="purple">PHP</span></h6>
+            </div>
+          </div>
+          <div class="items">
+            <label for="dev2">HY3D</label><h4 class="subColor">Software Engineer, 2019.12 ~ 2020.02</h4>
+          </div>
+          <div class="subitems sub2">
+            <div class="subitem">
+              <h5>사내 업무 자동화를 위한 소프트웨어 개발</h5>
+              <h6><span class="yellow">JS</span><span class="blue">Node.JS</span><span class="pink">Electron</span></h6>
+            </div>
+          </div>
+          <div class="items">
+            <label for="dev3">해톡</label><h4 class="subColor">Front-end Developer, 2020.02 ~ 2020.04</h4>
+          </div>
+          <div class="subitems sub3">
+            <div class="subitem">
+              <h5>플랫폼 웹 + 모바일 페이지 제작 및 위치기반 기능 구현</h5>
+              <h6><span class="red">HTML</span><span class="green">CSS</span><span class="yellow">JS</span></h6>
+            </div>
+          </div>
+        </div><hr />
+        <div class="education">
+          <h2 class="subtitle">학력</h2>
+          <h3>🇰🇷 선린 인터넷 고등학교</h3>
+          <h4>정보통신과(정보보안과) 졸업, 2015.03 ~ 2018.02</h4>
+          <h3>🇰🇷 한양대학교 ERICA</h3>
+          <h4>소프트웨어학부 재학, 2019.03 ~</h4>
+        </div>
+      </div>
+      <div class="member">
+        <div class="team">
+          <h1>Team : 개꿈</h1>
+          <h2>(개발 꿈나무 라는 뜻 ㅎ)</h2>
+        </div>
+        <div class="members">
+          <div class="item">
+            <h1>하현우 (high2092)</h1>
+            <h2>Email : high2092@gmail.com</h2>
+            <h2>S-ID : 2019036844</h2>
+            <a href="https://github.com/high2092/2020oss_repo">Github repo</a>
+          </div>
+          <div class="item">
+            <h1>박준성 (rasauq1122)</h1>
+            <h2>Email : rasauq1122@gmail.com</h2>
+            <h2>S-ID : 2019052851</h2>
+            <a href="https://github.com/rasauq1122/2020oss_repo">Github repo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
